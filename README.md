@@ -1,14 +1,14 @@
-# electron-reactstrap-boilerplate
+# electron-semantic-boilerplate
 
-Start point for ElectronJS projects with ReactJS and Bootstrap.
+Start point for ElectronJS projects with ReactJS and SemanticUI.
 
 ## Usage
 
 Clone the repo and install dependencies.
 
 ```bash
-git clone https://github.com/unnamed-community/electron-reactstrap-boilerplate.git
-cd electron-reactstrap-boilerplate
+git clone https://github.com/unnamed-community/electron-semantic-boilerplate.git
+cd electron-semantic-boilerplate
 npm install
 ```
 
@@ -39,6 +39,5 @@ To build the project run:
 ```bash
 npm run build
 ```
-
 
 An optimized version of the code will be generated in the `dist/` folder. The `dist/` folder and the `main.js` file make up your application. Now you just have to distribute it according to the [electron documentation](https://electronjs.org/docs/tutorial/application-distribution).
