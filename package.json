@@ -3,11 +3,29 @@
   "version": "0.1.0",
   "description": "Start point for ElectronJS projects with ReactJS and SemanticUI.",
   "main": "./prod/main.js",
+  "build": {
+    "productName": "Electron Semantic Boilerplate",
+    "appId": "com.example.app",
+    "directories": {
+      "output": "dist",
+      "buildResources": "resources"
+    },
+    "win": {
+      "target": "msi",
+      "icon": "resources/icon.ico"
+    },
+    "linux": {
+      "target": "deb",
+      "icon": "resources/icon.png"
+    }
+  },
   "scripts": {
     "start": "electron .",
     "dev": "electron dev/main.js --debug",
     "build-dev": "webpack --watch --mode development --config config/webpack.dev.config.js",
-    "build-prod": "webpack --mode production --config config/webpack.prod.config.js"
+    "build-prod": "webpack --mode production --config config/webpack.prod.config.js",
+    "dist-linux": "npm run build-prod && electron-builder --linux",
+    "dist-windows": "npm run build-prod && electron-builder --windows"
   },
   "repository": {
     "type": "git",
