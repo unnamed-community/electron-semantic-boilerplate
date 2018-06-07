@@ -2,12 +2,12 @@
   "name": "electron-semantic-boilerplate",
   "version": "0.1.0",
   "description": "Start point for ElectronJS projects with ReactJS and SemanticUI.",
-  "main": "main.js",
+  "main": "./prod/main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "electron . --debug",
-    "compile": "webpack --watch --mode development",
-    "build": "webpack --mode production"
+    "dev": "electron dev/main.js --debug",
+    "build-dev": "webpack --watch --mode development --config config/webpack.dev.config.js",
+    "build-prod": "webpack --mode production --config config/webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -36,12 +36,12 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
     "electron": "^2.0.2",
-    "electron-reload": "^1.2.2",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.21.0",
     "webpack": "^4.10.2",
-    "webpack-cli": "^3.0.1"
+    "webpack-cli": "^3.0.1",
+    "webpack-merge": "^4.1.2"
   },
   "dependencies": {
     "react": "^16.4.0",

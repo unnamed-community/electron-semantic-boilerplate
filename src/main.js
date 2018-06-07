@@ -1,22 +1,21 @@
-const { app, BrowserWindow, Menu } = require('electron')
-const reload = require('electron-reload')
-const path = require('path')
-const url = require('url')
+import path from 'path'
+import url from 'url'
+import { app, BrowserWindow, Menu } from 'electron'
+import config from '../config/app'
+
 const debug = /--debug/.test(process.argv[2])
 
 let mainWindow
-
-if (debug) reload(path.join(__dirname, 'dist'))
 
 function createWindow() {
     mainWindow = new BrowserWindow({ width: 800, height: 600 })
 
     mainWindow.setMenu(null)
-    mainWindow.setTitle(require('./package.json').name)
+    mainWindow.setTitle(config.title)
     if (debug) mainWindow.openDevTools()
 
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'dist/index.html'),
+        pathname: path.join(__dirname, 'index.html'),
         protocol: 'file:',
         slashes: true
     }))

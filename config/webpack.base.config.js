@@ -1,12 +1,10 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-
-const htmlWebpackPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html"
-});
+const path = require('path')
 
 module.exports = {
-  target: "electron-main",
+  node: {
+    __dirname: false,
+    __filename: false
+  },
   module: {
     rules: [
       {
@@ -39,10 +37,9 @@ module.exports = {
         ]
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=fonts/[name].[ext]'
+        test: /\.(eot|ttf|woff|woff2)$/,
+        loader: 'file-loader?name=fonts/[name]-[hash:8].[ext]'
       }
     ]
-  },
-  plugins: [htmlWebpackPlugin]
-};
+  }
+}
