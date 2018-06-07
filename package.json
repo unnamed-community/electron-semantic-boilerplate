@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "dev": "electron . --debug",
-    "compile": "webpack --mode development",
+    "compile": "webpack --watch --mode development",
     "build": "webpack --mode production"
   },
   "repository": {

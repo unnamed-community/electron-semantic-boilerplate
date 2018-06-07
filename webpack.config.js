@@ -6,7 +6,6 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  watch: true,
   target: "electron-main",
   module: {
     rules: [
