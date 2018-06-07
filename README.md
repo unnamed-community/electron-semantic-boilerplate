@@ -4,7 +4,7 @@ Start point for ElectronJS projects with ReactJS and SemanticUI.
 
 ## Usage
 
-Clone the repo and install dependencies.
+Clone the repo and install dependencies:
 
 ```bash
 git clone https://github.com/unnamed-community/electron-semantic-boilerplate.git
@@ -17,27 +17,29 @@ npm install
 To run the project run in a terminal:
 
 ```bash
-npm run compile
+npm run build-dev
 ```
 
 Do not close the terminal, open another and run:
 
 ```bash
-npm start
-```
-
-To run the project with the development tools open and the live reloading activated run:
-
-```bash
 npm run dev
 ```
 
-## Building the project
+## Generating dist files
 
-To build the project run:
+To generate dist files from the project run:
 
+**On Linux**
 ```bash
-npm run build
+npm run dist-linux
 ```
 
-An optimized version of the code will be generated in the `dist/` folder. The `dist/` folder and the `main.js` file make up your application. Now you just have to distribute it according to the [electron documentation](https://electronjs.org/docs/tutorial/application-distribution).
+**On Windows**
+```powershell
+npm run dist-windows
+```
+
+The `dist` folder will be generated. The `.deb` or `.msi` file will be inside it.
+
+> For further dist config, edit the `build` config in `package.json` acording [electron-builder documentation](https://www.electron.build/configuration/configuration).
