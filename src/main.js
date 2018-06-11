@@ -6,16 +6,7 @@ import config from '../config/app'
 let mainWindow
 
 const createWindow = () => {
-  mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    minWidth: 800,
-    minHeight: 600,
-    maxWidth: 800,
-    maxHeight: 600,
-    resizable: false,
-    maximizable: false
-  })
+  mainWindow = new BrowserWindow(config.windowOpts)
 
   mainWindow.setMenu(null)
   mainWindow.setTitle(config.title)

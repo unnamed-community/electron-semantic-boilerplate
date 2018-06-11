@@ -18,6 +18,7 @@ module.exports = merge(baseConfig, mainConfig, rendererConfig, {
       type: "reload",
       options: {
         path: path.resolve(__dirname, '..', OUTPUT_DIR, 'main.js'),
+        stopOnClose: true,
         spawnOpt: {
           cwd: path.resolve(__dirname, '..', OUTPUT_DIR),
           env: {
