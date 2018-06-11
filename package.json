@@ -6,6 +6,11 @@
   "build": {
     "productName": "Electron Semantic Boilerplate",
     "appId": "com.example.app",
+    "files": {
+      "filter": [
+        "package.json", "prod/**", "!node_modules${/*}"
+      ]
+    },
     "directories": {
       "output": "dist",
       "buildResources": "./resources"
