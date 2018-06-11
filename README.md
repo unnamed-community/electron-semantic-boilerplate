@@ -17,10 +17,10 @@ npm install
 To run the project run in a terminal:
 
 ```bash
-npm run build-dev
+npm start
 ```
 
-Do not close the terminal, open another and run:
+To run in **developing mode** run:
 
 ```bash
 npm run dev
@@ -30,14 +30,14 @@ npm run dev
 
 To generate dist files from the project run:
 
-**On Linux**
-```bash
-npm run dist-linux
-```
-
 **On Windows**
 ```powershell
 npm run dist-windows
+```
+
+**On Linux**
+```bash
+npm run dist-linux
 ```
 
 The `dist` folder will be generated. The `.deb` or `.msi` file will be inside it.

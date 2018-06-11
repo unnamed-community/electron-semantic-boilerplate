@@ -3,8 +3,6 @@ import url from 'url'
 import { app, BrowserWindow, ipcMain as ipc, dialog } from 'electron'
 import config from '../config/app'
 
-const debug = /--debug/.test(process.argv[2])
-
 let mainWindow
 
 const createWindow = () => {
@@ -21,7 +19,7 @@ const createWindow = () => {
 
   mainWindow.setMenu(null)
   mainWindow.setTitle(config.title)
-  if (debug) mainWindow.openDevTools()
+  if (process.env.environment === 'development') mainWindow.openDevTools()
 
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
