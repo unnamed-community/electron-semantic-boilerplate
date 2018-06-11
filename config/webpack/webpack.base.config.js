@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
   node: {
     __dirname: false,
@@ -31,14 +29,14 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name]-[hash:8].[ext]'
+              name: 'assets/[name]-[hash:8].[ext]'
             },
           },
         ]
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=fonts/[name]-[hash:8].[ext]'
+        loader: 'file-loader?name=assets/fonts/[name]-[hash:8].[ext]'
       }
     ]
   }

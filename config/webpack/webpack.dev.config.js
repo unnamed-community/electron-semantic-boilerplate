@@ -6,21 +6,21 @@ const baseConfig = require('./webpack.base.config')
 const mainConfig = require('./webpack.main.config')
 const rendererConfig = require('./webpack.renderer.config')
 
-const OUTPUT_DIR = 'dev'
+const OUTPUT_DIR = path.resolve(__dirname, '..', '..', 'dev')
 
 module.exports = merge(baseConfig, mainConfig, rendererConfig, {
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '..', OUTPUT_DIR)
+    path: OUTPUT_DIR
   },
   plugins: [
     new ElectronConnectPlugin({
       type: "reload",
       options: {
-        path: path.resolve(__dirname, '..', OUTPUT_DIR, 'main.js'),
+        path: path.resolve(OUTPUT_DIR, 'main.js'),
         stopOnClose: true,
         spawnOpt: {
-          cwd: path.resolve(__dirname, '..', OUTPUT_DIR),
+          cwd: OUTPUT_DIR,
           env: {
             environment: 'development'
           }

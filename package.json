@@ -8,21 +8,21 @@
     "appId": "com.example.app",
     "directories": {
       "output": "dist",
-      "buildResources": "resources"
+      "buildResources": "./resources"
     },
     "win": {
       "target": "msi",
-      "icon": "resources/icon.ico"
+      "icon": "./resources/icon.ico"
     },
     "linux": {
       "target": "deb",
-      "icon": "resources/icon.png"
+      "icon": "./resources/icon.png"
     }
   },
   "scripts": {
     "start": "npm run build-prod && electron .",
-    "dev": "webpack --watch --mode development --config config/webpack.dev.config.js",
-    "build-prod": "webpack --mode production --config config/webpack.prod.config.js",
+    "dev": "webpack --watch --mode development --config config/webpack/webpack.dev.config.js",
+    "build-prod": "webpack --mode production --config config/webpack/webpack.prod.config.js",
     "dist-linux": "npm run build-prod && electron-builder --linux",
     "dist-windows": "npm run build-prod && electron-builder --windows"
   },
