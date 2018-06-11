@@ -8,7 +8,16 @@ const debug = /--debug/.test(process.argv[2])
 let mainWindow
 
 function createWindow() {
-    mainWindow = new BrowserWindow({ width: 800, height: 600 })
+    mainWindow = new BrowserWindow({ 
+        width: 800, 
+        height: 600 ,
+        minWidth: 800,
+        minHeight: 600,
+        maxWidth: 800,
+        maxHeight: 600,
+        resizable: false,
+        maximizable: false
+    })
 
     mainWindow.setMenu(null)
     mainWindow.setTitle(config.title)
