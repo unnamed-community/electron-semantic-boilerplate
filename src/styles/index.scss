@@ -1,4 +1,7 @@
-html, body {
+@import "~semantic-ui-css/semantic.min.css";
+
+html,
+body {
   user-select: none;
   cursor: default;
 }
@@ -23,9 +26,9 @@ img {
   color: gray;
   font-size: 13px;
   padding: 0 20px !important;
-}
 
-.footer-bar >  span {
-  cursor: pointer;
-  margin-right: 20px;
+  span {
+    cursor: pointer;
+    margin-right: 20px;
+  }
 }
