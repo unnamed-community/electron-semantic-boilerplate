@@ -1,4 +1,4 @@
-# electron-semantic-boilerplate
+# Electron Semantic Boilerplate
 
 Start point for ElectronJS projects with ReactJS and SemanticUI.
 
@@ -26,16 +26,32 @@ To run in **developing mode** run:
 npm run dev
 ```
 
+## Coding
+
+In the `config/app.js` file is the basic configuration for the main window. You must edit it to your liking.
+
+Now, you can start coding in source code located in `src` folder.
+
+You can check the `main.js` file and see the ipcMain listeners implemented by default. You just need to call them on render process with ipcRenderer.
+
+## Locales
+
+In the `locales` folder you will find all locales strings for multilanguage support. The files names must be one of the [electron locales](https://electronjs.org/docs/api/locales).
+
+Additionally, the locales files must follow [i18n format](https://github.com/mashpie/i18n-node#storage).
+
 ## Generating dist files
 
 To generate dist files from the project run:
 
 **On Windows**
+
 ```powershell
 npm run dist-windows
 ```
 
 **On Linux**
+
 ```bash
 npm run dist-linux
 ```

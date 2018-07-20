@@ -1,6 +1,6 @@
 {
   "name": "electron-semantic-boilerplate",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Start point for ElectronJS projects with ReactJS and SemanticUI.",
   "main": "./prod/main.js",
   "build": {
