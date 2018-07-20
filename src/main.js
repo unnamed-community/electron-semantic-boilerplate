@@ -66,3 +66,7 @@ ipc.on('open-information-dialog', (event, args) => {
     event.sender.send('information-dialog-selection', index)
   })
 })
+
+ipc.on('get-system-locale', (event, callback) => {
+  event.sender.send('system-locale-information', app.getLocale())
+})

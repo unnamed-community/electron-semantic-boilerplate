@@ -10,14 +10,14 @@ export default class Home extends React.Component {
     super(props)
   }
 
-  openUrl = (url) => () => shell.openExternal(url)
+  openUrl = url => () => shell.openExternal(url)
 
   render() {
     return (
       <Grid>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <h1 className='space-top'>Start Coding!</h1>
+            <h1 className='space-top'>{__('title')}</h1>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -27,7 +27,7 @@ export default class Home extends React.Component {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <p>Enjoy developing desktop apps with these technologies:</p>
+            <p>{__('description')}</p>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row centered columns={5}>
@@ -76,13 +76,13 @@ export default class Home extends React.Component {
         </Grid.Row>
         <div className='footer-bar'>
           <span onClick={this.openUrl('https://github.com/unnamed-community/electron-semantic-boilerplate')}>
-            <Icon name='github' /> View on Github
+            <Icon name='github' /> {__('view_on_github')}
           </span>
           <span onClick={this.openUrl('https://github.com/unnamed-community/electron-semantic-boilerplate/issues')}>
-            <Icon name='bug' /> Report a bug
+            <Icon name='bug' /> {__('report_a_bug')}
           </span>
           <span onClick={this.openUrl('https://github.com/unnamed-community/electron-semantic-boilerplate/graphs/contributors')}>
-            <Icon name='users' /> Credits
+            <Icon name='users' /> {__('creadits')}
           </span>
         </div>
       </Grid>
