@@ -1,7 +1,7 @@
 module.exports = {
   node: {
     __dirname: false,
-    __filename: false
+    __filename: false,
   },
   module: {
     rules: [
@@ -9,19 +9,22 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: 'babel-loader',
+        },
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           {
-            loader: "style-loader"
+            loader: 'style-loader',
           },
           {
-            loader: "css-loader"
-          }
-        ]
+            loader: 'css-loader',
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
       },
       {
         test: /\.(jpg|png|gif|svg|pdf|ico)$/,
@@ -29,15 +32,15 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'assets/[name]-[hash:8].[ext]'
+              name: 'assets/[name]-[hash:8].[ext]',
             },
           },
-        ]
+        ],
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=assets/fonts/[name]-[hash:8].[ext]'
-      }
-    ]
-  }
-}
+        loader: 'file-loader?name=assets/fonts/[name]-[hash:8].[ext]',
+      },
+    ],
+  },
+};
