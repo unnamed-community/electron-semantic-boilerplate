@@ -101,7 +101,7 @@ ipc.on('open-information-dialog', (event, args) => {
 
 // This listener will be called on renderer process and it will
 // get the system locale.
-ipc.on('get-system-locale', (event, callback) => {
+ipc.on('get-system-locale', event => {
   event.sender.send('system-locale-information', app.getLocale());
 });
 

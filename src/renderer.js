@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import './styles/index.scss';
 import Home from './components/Home';
 
-ipc.send('get-system-locale');
 ipc.on('system-locale-information', (event, locale) => {
   i18n.configure({
     directory: __dirname + '/../locales',
@@ -26,3 +25,4 @@ ipc.on('system-locale-information', (event, locale) => {
 
   ReactDOM.render(<Home />, document.getElementById('root'));
 });
+ipc.send('get-system-locale');

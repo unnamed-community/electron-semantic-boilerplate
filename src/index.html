@@ -7,6 +7,38 @@
 
 <body>
   <div id="root"></div>
+  <div id="preloader">
+    <div class="preloader-circle"></div>
+    <div class="preloader-circle"></div>
+    <div class="preloader-circle"></div>
+  <style>
+    #preloader .preloader-circle {
+      width: 10px;
+      height: 10px;
+      background-color: #aaa;
+      display: inline-block;
+      border-radius: 50%;
+    }
+
+    #preloader {
+      text-align: center;
+      vertical-align: middle;
+      position: fixed;
+      width: 70px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      margin-top: -20px;
+      margin-left: -70px;
+      animation: iter 1s linear infinite;
+    }
+
+    @keyframes iter {
+      50% {
+        opacity: .1;
+      }
+    }
+  </style>
   <script>
     if (process.env.environment === 'development') {
       try {

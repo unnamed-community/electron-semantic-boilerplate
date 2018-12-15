@@ -10,6 +10,11 @@ export default class Home extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    const preloader = document.querySelector('#preloader');
+    preloader.parentNode.removeChild(preloader);
+  }
+
   openUrl = url => () => shell.openExternal(url);
 
   render() {
