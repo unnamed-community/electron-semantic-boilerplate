@@ -1,6 +1,6 @@
 {
   "name": "electron-semantic-boilerplate",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Start point for ElectronJS projects with ReactJS and SemanticUI.",
   "main": "./prod/main.js",
   "build": {
@@ -61,7 +61,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
-    "electron": "^2.0.2",
+    "electron": "^3.0.12",
     "electron-builder": "^20.15.1",
     "electron-connect": "^0.6.3",
     "file-loader": "^1.1.11",
